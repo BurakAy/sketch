@@ -1,1 +1,2 @@
-# sketch 
+Author: Burak Aydemir
+Project: Javascript/jQuery
