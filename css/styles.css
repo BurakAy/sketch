@@ -1,23 +1,29 @@
-html {
-	height: 100%;
-	width: 100%;
-}
-
-body {
-	margin: 0 auto;
+ body {
+	margin: 20px auto;
 	text-align: center;
-	height: 100%;
-	width: 100%;
 }
 
-.row {
-	height: 50px;
-	background-color: white;
+#container {
+	margin: auto;
+	height: 960px;
+	width: 960px;
+	padding: 0;
+	font-size: 0;
 }
 
-.square {
-	border: 1px solid black;
-	height: 50px;
-	width: 50px;
+button {
+	border-radius: 10px;
+	background-color: blue;
+	color: white;
+	font-weight: bold;
+	border: 1px solid silver;
+	width: 100px;
+	height: 30px;
+}
+
+.grid {
+	margin: 0;
+	padding: 0;
+	outline: 1px solid black;
 	display: inline-block;
 }
