@@ -1,25 +1,39 @@
-var columns = 16;
-var rows = 16;
-var $row = $('<div />', {class: 'row'});
-var $square = $('<div />', {class: 'square'});
+// function builds a grid
+function createGrid(x) {
+	for (var rows = 0; rows < x; rows++) {
+		for (var columns = 0; columns < x; columns++) {
+			$('#container').append('<div class="grid"></div>');
+		};
+	};
+	$('.grid').width(960/x);
+	$('.grid').height(960/x);
+};
 
-function makeGrid() {
-	for (var i = 0; i < columns; i++) {
-		$row.append($square.clone());
-	}
-	for (var i = 0; i < rows; i++) {
-		$('body').append($row.clone());
-	}
+// function to clear grid
+function clearGrid() {
+	$('.grid').remove();
+};
+
+// prompt user to select new grid dimension
+function refreshGrid() {
+	var z = prompt("Enter new grid dimension");
+	clearGrid();
+	createGrid(z);
 }
 
-$(document).ready(function() {
-	makeGrid();
+// create grid on page load
+$('document').ready(function() {
+	createGrid(16);
 
-	$('.square').mouseenter(function() {
+	$('.grid').mouseover(function() {
 		$(this).css('background-color', 'blue');
 	});
 
 	$('button').click(function() {
-		$('.square').empty();
+		refreshGrid();
+
+		$('.grid').mouseover(function() {
+		$(this).css('background-color', 'blue');
+		});
 	});
 });
