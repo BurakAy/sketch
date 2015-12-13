@@ -16,8 +16,8 @@ function clearGrid() {
 
 // prompt user to select new grid dimension
 function refreshGrid() {
-	var z = prompt("Enter new grid dimension");
-	var y = prompt("Enter new grid column");
+	var z = prompt("Enter new grid rows");
+	var y = prompt("Enter new grid columns");
 	clearGrid();
 	createGrid(z, y);
 }
